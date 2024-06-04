@@ -1,0 +1,107 @@
+html,
+body,
+.intro {
+  height: 100%;
+}
+
+@media (min-width: 550px) and (max-width: 750px) {
+  html,
+  body,
+  .intro {
+    height: 550px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+  html,
+  body,
+  .intro {
+    height: 550px;
+  }
+}
+
+a.link {
+  font-size: 0.875rem;
+  color: #6582b0;
+}
+
+a.link:hover,
+a.link:active {
+  color: #426193;
+}
+
+/*Анимация label для текстового input*/
+.input-container {
+  position: relative;
+}
+
+.input {
+  height: 160% !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.cut {
+  background-color: #fff;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 76px;
+}
+
+.cut-long {
+  width: 126px;
+}
+
+.cut-long-plus {
+  width: 146px;
+}
+
+.cut-super-long {
+  width: 206px;
+}
+
+.cut-middle {
+  width: 94px;
+}
+
+.cut-middle-plus {
+  width: 116px;
+}
+
+.cut-short {
+  width: 70px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.placeholder {
+  color: #65657b;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 13px;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-23px) translateX(10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+
+.input:focus ~ .placeholder {
+  color: #6582b0;
+}
